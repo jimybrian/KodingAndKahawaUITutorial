@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txActivity"
+            android:text="Show Activity"
+            android:layout_margin="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textAppearance="?textAppearanceHeadline4"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txObtainedActivity"
+            android:layout_margin="8dp"
+            app:layout_constraintTop_toBottomOf="@id/txActivity"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textAppearance="?textAppearanceBody1"
+            tools:text="Obtained Activity"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txType"
+            android:layout_margin="8dp"
+            app:layout_constraintTop_toBottomOf="@id/txObtainedActivity"
+            app:layout_constraintEnd_toStartOf="parent"
+            android:textAppearance="?textAppearanceBody1"
+            tools:text="Activity Type"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txNumberParticipants"
+            android:layout_margin="8dp"
+            app:layout_constraintTop_toBottomOf="@id/txType"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textAppearance="?textAppearanceBody1"
+            tools:text="Participants: 2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txPrice"
+            android:layout_margin="8dp"
+            app:layout_constraintTop_toBottomOf="@id/txNumberParticipants"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textAppearance="?textAppearanceBody1"
+            tools:text="Price" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txLink"
+            android:layout_margin="8dp"
+            app:layout_constraintTop_toBottomOf="@id/txPrice"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textAppearance="?textAppearanceBody1"
+            tools:text="Link" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/txLink"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="8dp"
+            android:id="@+id/btnGetActivity"
+            android:text="Click to Get Activity" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txDarajaRequest"
+            android:text="Daraja Request"
+            app:layout_constraintTop_toBottomOf="@id/btnGetActivity"
+            android:textAppearance="?textAppearanceHeadline4"
+            android:layout_margin="8dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tiPhoneNumber"
+            app:layout_constraintTop_toBottomOf="@id/txDarajaRequest"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="8dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/etPhoneNumber"
+                android:inputType="phone"
+                android:hint="Enter Phone Number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tiAmount"
+            app:layout_constraintTop_toBottomOf="@id/tiPhoneNumber"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="8dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/etAmount"
+                android:inputType="number"
+                android:hint="Enter Amount" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tiAmount"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/btnInitiateSTKPush"
+            android:layout_margin="8dp"
+            android:text="Initiate STK Push" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
